@@ -1,0 +1,5 @@
+Django==5.1.6
+nltk==3.9.1
+pyttsx3==2.98
+SpeechRecognition==3.14.1
+transformers==4.48.3
