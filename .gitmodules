@@ -1,0 +1,3 @@
+[submodule "text-Summarization"]
+	path = text-Summarization
+	url = https://github.com/prajhverma12/text-Summarization.git
