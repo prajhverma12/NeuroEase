@@ -1,5 +1,10 @@
 Django==5.1.6
+Flask==3.1.0
+Flask_Cors==5.0.0
 nltk==3.9.1
+numpy==2.2.4
+opencv_python==4.11.0.86
 pyttsx3==2.98
 SpeechRecognition==3.14.1
+tensorflow==2.18.0
 transformers==4.48.3
