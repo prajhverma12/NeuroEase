@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Speech-to-Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-image: url('{% static "images/toolssection.jpg" %}'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    h1 {
+      margin-top: 50px;
+      color: #fff;
+    }
+
+    .button-container {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button.start {
+      background-color: #28a745;
+      color: white;
+    }
+
+    button.start:hover {
+      background-color: #218838;
+    }
+
+    button.stop {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    button.stop:hover {
+      background-color: #c82333;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      width: 80%;
+      max-width: 600px;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h1>Live Speech-to-Text</h1>
+  <div class="button-container">
+    <button id="start" class="start">Start Listening</button>
+    <button id="stop" class="stop" disabled>Stop Listening</button>
+  </div>
+  <div id="output">Press "Start Listening" to begin.</div>
+
+  <script>
+    let recognition;
+
+    // Get references to buttons and output
+    const startBtn = document.getElementById("start");
+    const stopBtn = document.getElementById("stop");
+    const output = document.getElementById("output");
+
+    // Start Listening
+    startBtn.addEventListener("click", () => {
+      // Initialize SpeechRecognition
+      recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+      recognition.lang = "en-US"; // Set language to English (US)
+      recognition.continuous = true; // Keep listening until stopped
+      recognition.interimResults = true; // Show interim results
+
+      recognition.start(); // Start recognition
+      startBtn.disabled = true; // Disable "Start" button
+      stopBtn.disabled = false; // Enable "Stop" button
+      output.innerText = "Listening..."; // Update output text
+
+      // Handle speech recognition results
+      recognition.onresult = (event) => {
+        let transcript = "";
+        for (let i = 0; i < event.results.length; i++) {
+          transcript += event.results[i][0].transcript + " "; // Append each result
+        }
+        output.innerText = transcript.trim(); // Display the transcribed text
+      };
+
+      // Handle errors
+      recognition.onerror = (event) => {
+        console.error("Speech recognition error:", event.error);
+        output.innerText = "Error occurred: " + event.error;
+      };
+
+      // Handle recognition end
+      recognition.onend = () => {
+        startBtn.disabled = false; // Enable "Start" button
+        stopBtn.disabled = true; // Disable "Stop" button
+        output.innerText = "Recognition stopped."; // Update output text
+      };
+    });
+
+    // Stop Listening
+    stopBtn.addEventListener("click", () => {
+      if (recognition) {
+        recognition.stop(); // Stop recognition
+        stopBtn.disabled = true; // Disable "Stop" button
+        startBtn.disabled = false; // Enable "Start" button
+        output.innerText = "Stopped."; // Update output text
+      }
+    });
+  </script>
+</body>
+</html>

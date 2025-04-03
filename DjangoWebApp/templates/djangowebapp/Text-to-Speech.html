@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Speech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-image: url('{% static "images/toolssection.jpg" %}'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    h2 {
+      margin-top: 50px;
+      color: #fff;
+    }
+
+    textarea, button {
+      padding: 10px 15px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      width: 80%;
+      max-width: 600px;
+    }
+
+    button {
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button#convert_to_speech {
+      background-color: #007bff;
+      color: white;
+    }
+
+    button#convert_to_speech:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Text to Speech</h2>
+  <textarea id="text_to_speech_input" rows="4" cols="50" placeholder="Enter text to convert to speech"></textarea><br>
+  <button id="convert_to_speech">Convert to Speech</button>
+
+  <script>
+    const convertToSpeechBtn = document.getElementById("convert_to_speech");
+    const textToSpeechInput = document.getElementById("text_to_speech_input");
+
+    // Text-to-Speech Functionality
+    convertToSpeechBtn.addEventListener("click", () => {
+      const text = textToSpeechInput.value.trim();
+      if (!text) {
+        alert("Please enter text to convert to speech!");
+        return;
+      }
+
+      // Create a new SpeechSynthesisUtterance instance
+      const utterance = new SpeechSynthesisUtterance(text);
+
+      // Set speech properties
+      utterance.rate = 1; // Speed of speech (1 is normal speed)
+      utterance.volume = 1; // Volume (0.0 to 1.0)
+      utterance.pitch = 1; // Pitch (1 is normal pitch)
+
+      // Speak the text
+      window.speechSynthesis.speak(utterance);
+
+      // Debugging: Log to console when speaking starts
+      utterance.onstart = () => {
+        console.log("Speech started...");
+      };
+
+      // Debugging: Log to console when speaking ends
+      utterance.onend = () => {
+        console.log("Speech finished.");
+      };
+
+      // Debugging: Handle errors
+      utterance.onerror = (event) => {
+        console.error("Speech synthesis error:", event.error);
+      };
+    });
+  </script>
+</body>
+</html>

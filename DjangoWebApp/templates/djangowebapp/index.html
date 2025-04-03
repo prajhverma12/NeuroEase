@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detection</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 80%;
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function checkEmotionAndRedirect() {
+            fetch("{% url 'check_emotion_and_redirect' %}")
+                .then(response => {
+                    console.log("Response:", response); // Log the raw response
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Response JSON:", data); // Log the parsed JSON
+                    console.log("Redirect value:", data.redirect); // Log the redirect value
+                    if (data.redirect) {
+                        window.location.href = data.url;
+                    } else {
+                        alert("Not all emotions are Happy!");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error); // Log any errors
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1>Smile To Unlock</h1>
+    <img src="{% url 'video_feed' %}" >
+
+    <!-- Add a button to check emotion and redirect -->
+    <button onclick="checkEmotionAndRedirect()">Go to Home</button>
+</body>
+</html>

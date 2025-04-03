@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Sentiment Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-image: url('{% static "images/toolssection.jpg" %}'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    h2 {
+      margin-top: 50px;
+      color: #fff;
+    }
+
+    input, button {
+      padding: 10px 15px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      font-family: Arial, sans-serif;
+    }
+
+    input {
+      width: 80%;
+      max-width: 600px;
+    }
+
+    button {
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button#analyze {
+      background-color: #007bff;
+      color: white;
+    }
+
+    button#analyze:hover {
+      background-color: #0056b3;
+    }
+
+    #sentiment_result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      width: 80%;
+      max-width: 600px;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Text Sentiment Analysis</h2>
+  <input type="text" id="sentiment_input" placeholder="Enter text here">
+  <button id="analyze">Analyze Sentiment</button>
+  <div id="sentiment_result">Sentiment result will appear here...</div>
+
+  <script>
+    const analyzeBtn = document.getElementById("analyze");
+    const sentimentInput = document.getElementById("sentiment_input");
+    const sentimentResult = document.getElementById("sentiment_result");
+
+    // Analyze Sentiment
+    analyzeBtn.addEventListener("click", () => {
+      const text = sentimentInput.value.trim();
+      if (!text) {
+        sentimentResult.innerText = "Please enter text!";
+        return;
+      }
+
+      // Simulate a sentiment analysis API call
+      fetch("/analyze-sentiment/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "text=" + encodeURIComponent(text),
+      })
+      .then(response => response.json())
+      .then(data => {
+        sentimentResult.innerText = "Sentiment: " + data.sentiment;
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        sentimentResult.innerText = "Error analyzing sentiment.";
+      });
+    });
+  </script>
+</body>
+</html>

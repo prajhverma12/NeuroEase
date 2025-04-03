@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Neuro Ease</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="./Neuro Ease_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Neuro Ease_files/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="./Neuro Ease_files/animate.css">
+    
+    <link rel="stylesheet" href="./Neuro Ease_files/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Neuro Ease_files/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./Neuro Ease_files/magnific-popup.css">
+
+    <link rel="stylesheet" href="./Neuro Ease_files/aos.css">
+
+    <link rel="stylesheet" href="./Neuro Ease_files/ionicons.min.css">
+    
+    <link rel="stylesheet" href="./Neuro Ease_files/flaticon.css">
+    <link rel="stylesheet" href="./Neuro Ease_files/icomoon.css">
+    <link rel="stylesheet" href="./Neuro Ease_files/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+.custom-heading {
+      font-size: 5rem !important;
+      font-weight: bold !important;
+      color: #fff !important;
+}
+.nav-link {
+    color: #e8e5e0; /* Change this to your desired color */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+ 
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+ 
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+/* ------------------------------------------- */
+
+#home-section {
+  background-image: url('images/Mainpage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 0; /* Remove extra space above the neuro-divergence section */
+  padding-top: 20px;
+}
+
+
+
+
+.neuro-divergence-section {
+  width: 100vw; /* Ensures the section spans the full width of the viewport */
+  background-image: url('images/slide2.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  height: 100vh; /* Makes the section the full height of the viewport */
+  padding: 80px 20px; /* Remove extra padding */
+  margin: 0; /* Remove extra margin */
+  color: white; /* Ensures text is readable */
+  display: flex; /* Aligns content vertically and horizontally */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  font-size: 18px;
+  line-height: 1.8;
+  margin: auto;
+  min-height: 900px;
+  margin-top: 0; /* Remove extra space above the neuro-divergence section */
+  margin-bottom: 0; 
+}
+.tool-we-provide-section {
+  width: 100vw;
+  background-image: url('images/toolssection.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  padding: 80px 20px;
+}
+.resume-wrap {
+  background-image: url('images/slide2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); */
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  min-height: 200px; /* Increased minimum height */
+}
+.contact-us-section {
+  background-image: url('images/toolssection.jpg'); /* Ensure the path is correct */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  color: white; /* Ensures text is readable */
+  padding: 80px 20px; /* Adds padding inside the section */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow effect */
+  margin-bottom: 0px; /* Adds spacing below the section */
+  width: 100%; /* Ensures the section spans the full width */
+  height: auto; /* Adjusts height dynamically */
+  min-height: 900px; /* Ensures the section has a minimum height */
+  margin-top: 0; /* Remove extra space above the neuro-divergence section */
+  padding-top: 20px;
+  padding: 80px 20px;
+}
+
+
+#ftco-navbar .container {
+  padding: 20; /* Removes any padding inside the container */
+  margin: 150; /* Removes any margin around the container */
+}
+      
+
+      .slider-item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: vh; /* Adjust the height as needed */
+      }
+    
+      .navbar-nav {
+        display: flex;
+        flex-direction: row; /* Change to row if you want items aligned horizontally */
+        align-items: center;
+        margin-left: 5000px; /* Increase the margin to move the nav items further to the right */
+        justify-content: flex-start;
+      }
+
+      .navbar-nav .nav-item {
+        margin-bottom: 0px;
+      }
+
+      .about-img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      .container-fluid {
+        display: flex;
+      }
+
+      .navbar {
+        flex: 0 0 250px;
+        max-width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+      }
+
+      .content {
+        flex: 1;
+        padding-left: 20px;
+      }
+
+      
+
+      .text {
+        color: white;
+        text-align: center;
+
+        
+      }
+
+
+
+</style>
+
+
+  <style type="text/css">.scrollax-performance, .scrollax-performance *, .scrollax-performance *:before, .scrollax-performance *:after { pointer-events: none !important; -webkit-animation-play-state: paused !important; animation-play-state: paused !important; };</style></head>
+  <!-- <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300"> -->
+      
+      
+    <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0"><nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target scrolled awake" id="ftco-navbar">
+        <div class="container"> 
+          <a class="navbar-brand" href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/index.html"> Neuro Ease </a>
+         
+          <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"> --&gt;
+            <span class="oi oi-menu"></span> Menu
+           </button> 
+
+          <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+              
+              <li class="nav-item"><a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/index.html#about-section" class="nav-link"><span>Neuro Divergence</span></a></li>
+              <li class="nav-item"><a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/index.html#resume-section" class="nav-link"><span>Tools We Provide</span></a></li>
+              <li class="nav-item"><a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/index.html#extension-section" class="nav-link"><span>Extension</span></a></li>
+             
+              <li class="nav-item"><a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/index.html#contact-us-section" class="nav-link"><span>Contact Us</span></a></li>
+          
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section id="home-section" class="hero">
+          <div class="home-slider owl-carousel owl-loaded owl-drag">
+           
+        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2880px, 0px, 0px); transition: all; width: 7200px;"><div class="owl-item cloned" style="width: 1440px;"><div class="slider-item ">
+            <div class="overlay"></div>
+             <div class="container">
+              <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                
+                  <div class="one-forth d-flex align-items-center ftco-animate fadeInUp ftco-animated" data-scrollax=" properties: { translateY: &#39;70%&#39; }">
+                    <div class="text">
+                        <!-- <span class="subheading">Hello!</span> -->
+                        <!-- <h1 class="mb-4 mt-3">I'm <span></span></h1> -->
+
+                        <!-- Element to contain animated typing -->
+                        <span id="typing-animation"></span>
+
+                        <!-- <h1 class="mb-7">Welcome to Neuro Ease</h1> Added heading -->
+                        <h1 class="custom-heading">Welcome to Neuro Ease</h1>
+                        <span id="typing-animation"></span>
+                            
+
+                        <script>
+
+                          
+                         
+                        // Initialize the typing animation
+                        const typingAnimationElement = document.getElementById('typing-animation');
+
+                        // Create an array of typing text
+                          // const typingTexts = [
+                        // ' Data Analyst  ',
+                        // ' System Adminstrator  ',
+                        // ' Support Engineer  ',
+                        // ];
+
+                        // Create a function to display the typing animation for a given text
+                        function playTypingAnimation(text) {
+                        // Loop through each character and add it to the element
+                        for (let i = 0; i < text.length; i++) {
+                            setTimeout(() => {
+                            typingAnimationElement.textContent += text[i];
+                            }, i * 200); // Increase the delay to slow down the typing animation
+                        }
+
+                        // Once the animation is complete, reset the text and start over
+                        setTimeout(() => {
+                            typingAnimationElement.textContent = '';
+                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                        }, text.length * 200);
+                        }
+
+                        // Start the typing animation loop
+                        playTypingAnimation(typingTexts[0]);
+
+                        </script>
+
+                        <br>
+                        <br>
+                        <!-- <h2>A Senior Data Analyst</h2> -->
+                        <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                        <!-- <br> -->
+                        <!-- <p><a href="https://www.linkedin.com/in/himaja-bathala-2a2017159/" class="btn btn-primary py-3 px-4">Linkedln</a>  -->
+                            <!-- <a href="https://github.com/Himajabathala1998" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div></div><div class="owl-item cloned" style="width: 1440px;"><div class="slider-item ">
+            <div class="overlay"></div>
+             <div class="container">
+              <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                
+                  <div class="one-forth d-flex align-items-center ftco-animate fadeInUp ftco-animated" data-scrollax=" properties: { translateY: &#39;70%&#39; }">
+                    <div class="text">
+                        <!-- <span class="subheading">Hello!</span> -->
+                        <!-- <h1 class="mb-4 mt-3">I'm <span></span></h1> -->
+
+                        <!-- Element to contain animated typing -->
+                        <span id="typing-animation"></span>
+
+                        <!-- <h1 class="mb-7">Welcome to Neuro Ease</h1> Added heading -->
+                        <h1 class="custom-heading">Welcome to Neuro Ease</h1>
+                        <span id="typing-animation"></span>
+                            
+
+                        <script>
+
+                          
+                         
+                        // Initialize the typing animation
+                        const typingAnimationElement = document.getElementById('typing-animation');
+
+                        // Create an array of typing text
+                          // const typingTexts = [
+                        // ' Data Analyst  ',
+                        // ' System Adminstrator  ',
+                        // ' Support Engineer  ',
+                        // ];
+
+                        // Create a function to display the typing animation for a given text
+                        function playTypingAnimation(text) {
+                        // Loop through each character and add it to the element
+                        for (let i = 0; i < text.length; i++) {
+                            setTimeout(() => {
+                            typingAnimationElement.textContent += text[i];
+                            }, i * 200); // Increase the delay to slow down the typing animation
+                        }
+
+                        // Once the animation is complete, reset the text and start over
+                        setTimeout(() => {
+                            typingAnimationElement.textContent = '';
+                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                        }, text.length * 200);
+                        }
+
+                        // Start the typing animation loop
+                        playTypingAnimation(typingTexts[0]);
+
+                        </script>
+
+                        <br>
+                        <br>
+                        <!-- <h2>A Senior Data Analyst</h2> -->
+                        <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                        <!-- <br> -->
+                        <!-- <p><a href="https://www.linkedin.com/in/himaja-bathala-2a2017159/" class="btn btn-primary py-3 px-4">Linkedln</a>  -->
+                            <!-- <a href="https://github.com/Himajabathala1998" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div></div><div class="owl-item active" style="width: 1440px;"><div class="slider-item ">
+            <div class="overlay"></div>
+             <div class="container">
+              <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                
+                  <div class="one-forth d-flex align-items-center ftco-animate fadeInUp ftco-animated" data-scrollax=" properties: { translateY: &#39;70%&#39; }">
+                    <div class="text">
+                        <!-- <span class="subheading">Hello!</span> -->
+                        <!-- <h1 class="mb-4 mt-3">I'm <span></span></h1> -->
+
+                        <!-- Element to contain animated typing -->
+                        <span id="typing-animation"></span>
+
+                        <!-- <h1 class="mb-7">Welcome to Neuro Ease</h1> Added heading -->
+                        <h1 class="custom-heading">Welcome to Neuro Ease</h1>
+                        <span id="typing-animation"></span>
+                            
+
+                        <script>
+
+                          
+                         
+                        // Initialize the typing animation
+                        const typingAnimationElement = document.getElementById('typing-animation');
+
+                        // Create an array of typing text
+                          // const typingTexts = [
+                        // ' Data Analyst  ',
+                        // ' System Adminstrator  ',
+                        // ' Support Engineer  ',
+                        // ];
+
+                        // Create a function to display the typing animation for a given text
+                        function playTypingAnimation(text) {
+                        // Loop through each character and add it to the element
+                        for (let i = 0; i < text.length; i++) {
+                            setTimeout(() => {
+                            typingAnimationElement.textContent += text[i];
+                            }, i * 200); // Increase the delay to slow down the typing animation
+                        }
+
+                        // Once the animation is complete, reset the text and start over
+                        setTimeout(() => {
+                            typingAnimationElement.textContent = '';
+                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                        }, text.length * 200);
+                        }
+
+                        // Start the typing animation loop
+                        playTypingAnimation(typingTexts[0]);
+
+                        </script>
+
+                        <br>
+                        <br>
+                        <!-- <h2>A Senior Data Analyst</h2> -->
+                        <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                        <!-- <br> -->
+                        <!-- <p><a href="https://www.linkedin.com/in/himaja-bathala-2a2017159/" class="btn btn-primary py-3 px-4">Linkedln</a>  -->
+                            <!-- <a href="https://github.com/Himajabathala1998" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div></div><div class="owl-item cloned" style="width: 1440px;"><div class="slider-item ">
+            <div class="overlay"></div>
+             <div class="container">
+              <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                
+                  <div class="one-forth d-flex align-items-center ftco-animate fadeInUp ftco-animated" data-scrollax=" properties: { translateY: &#39;70%&#39; }">
+                    <div class="text">
+                        <!-- <span class="subheading">Hello!</span> -->
+                        <!-- <h1 class="mb-4 mt-3">I'm <span></span></h1> -->
+
+                        <!-- Element to contain animated typing -->
+                        <span id="typing-animation"></span>
+
+                        <!-- <h1 class="mb-7">Welcome to Neuro Ease</h1> Added heading -->
+                        <h1 class="custom-heading">Welcome to Neuro Ease</h1>
+                        <span id="typing-animation"></span>
+                            
+
+                        <script>
+
+                          
+                         
+                        // Initialize the typing animation
+                        const typingAnimationElement = document.getElementById('typing-animation');
+
+                        // Create an array of typing text
+                          // const typingTexts = [
+                        // ' Data Analyst  ',
+                        // ' System Adminstrator  ',
+                        // ' Support Engineer  ',
+                        // ];
+
+                        // Create a function to display the typing animation for a given text
+                        function playTypingAnimation(text) {
+                        // Loop through each character and add it to the element
+                        for (let i = 0; i < text.length; i++) {
+                            setTimeout(() => {
+                            typingAnimationElement.textContent += text[i];
+                            }, i * 200); // Increase the delay to slow down the typing animation
+                        }
+
+                        // Once the animation is complete, reset the text and start over
+                        setTimeout(() => {
+                            typingAnimationElement.textContent = '';
+                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                        }, text.length * 200);
+                        }
+
+                        // Start the typing animation loop
+                        playTypingAnimation(typingTexts[0]);
+
+                        </script>
+
+                        <br>
+                        <br>
+                        <!-- <h2>A Senior Data Analyst</h2> -->
+                        <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                        <!-- <br> -->
+                        <!-- <p><a href="https://www.linkedin.com/in/himaja-bathala-2a2017159/" class="btn btn-primary py-3 px-4">Linkedln</a>  -->
+                            <!-- <a href="https://github.com/Himajabathala1998" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div></div><div class="owl-item cloned" style="width: 1440px;"><div class="slider-item ">
+            <div class="overlay"></div>
+             <div class="container">
+              <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+                
+                  <div class="one-forth d-flex align-items-center ftco-animate fadeInUp ftco-animated" data-scrollax=" properties: { translateY: &#39;70%&#39; }">
+                    <div class="text">
+                        <!-- <span class="subheading">Hello!</span> -->
+                        <!-- <h1 class="mb-4 mt-3">I'm <span></span></h1> -->
+
+                        <!-- Element to contain animated typing -->
+                        <span id="typing-animation"></span>
+
+                        <!-- <h1 class="mb-7">Welcome to Neuro Ease</h1> Added heading -->
+                        <h1 class="custom-heading">Welcome to Neuro Ease</h1>
+                        <span id="typing-animation"></span>
+                            
+
+                        <script>
+
+                          
+                         
+                        // Initialize the typing animation
+                        const typingAnimationElement = document.getElementById('typing-animation');
+
+                        // Create an array of typing text
+                          // const typingTexts = [
+                        // ' Data Analyst  ',
+                        // ' System Adminstrator  ',
+                        // ' Support Engineer  ',
+                        // ];
+
+                        // Create a function to display the typing animation for a given text
+                        function playTypingAnimation(text) {
+                        // Loop through each character and add it to the element
+                        for (let i = 0; i < text.length; i++) {
+                            setTimeout(() => {
+                            typingAnimationElement.textContent += text[i];
+                            }, i * 200); // Increase the delay to slow down the typing animation
+                        }
+
+                        // Once the animation is complete, reset the text and start over
+                        setTimeout(() => {
+                            typingAnimationElement.textContent = '';
+                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                        }, text.length * 200);
+                        }
+
+                        // Start the typing animation loop
+                        playTypingAnimation(typingTexts[0]);
+
+                        </script>
+
+                        <br>
+                        <br>
+                        <!-- <h2>A Senior Data Analyst</h2> -->
+                        <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                        <!-- <br> -->
+                        <!-- <p><a href="https://www.linkedin.com/in/himaja-bathala-2a2017159/" class="btn btn-primary py-3 px-4">Linkedln</a>  -->
+                            <!-- <a href="https://github.com/Himajabathala1998" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div></div></div></div><div class="owl-nav disabled"><button role="presentation" class="owl-prev"><span class="ion-md-arrow-back"></span></button><button role="presentation" class="owl-next"><span class="ion-chevron-right"></span></button></div><div class="owl-dots disabled"><button class="owl-dot active"><span></span></button></div></div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="row d-flex align-items-stretch">
+                <!-- <div class="row d-flex"> -->
+                    <div class="col-md-6 col-lg-5 d-flex">
+                        <div class="img-about img d-flex align-items-stretch">
+                            <div class="overlay">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                      <div class="about-img">
+                                        <img src="./Neuro Ease_files/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+                                      </div>
+                                    </div>
+                                    <!-- Details next to profile image -->
+                                    <div class="col-sm-6 col-md-7">
+                                      <!-- <div class="about-info"> -->
+                                        <!-- <p><span class="title-s">Name: </span> <span>Himaja Bathala</span></p> -->
+                                        <!-- <p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p> -->
+                                        <!-- <p><span class="title-s">Experience: </span> <span>6 Years </span></p> -->
+                                        <!-- <p><span class="title-s">Address: </span> <span>Springfiled, Illinois</span></p> -->
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                <!-- <div class="skill-mf"> -->
+                                    <!-- <p class="title-s">Skills</p> -->
+                                    <!-- <span>SQL</span> <span class="pull-right">95%</span> -->
+                                    <!-- <div class="progress"> -->
+                                        <!-- <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" -->
+                                            <!-- aria-valuemax="100"></div> -->
+                                    <!-- </div> -->
+                                    
+                                    <!-- <span>PYTHON</span> <span class="pull-right">85%</span> -->
+                                    <!-- <div class="progress"> -->
+                                        <!-- <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" -->
+                                            <!-- aria-valuemax="100"></div> -->
+                                    <!-- </div> -->
+                                    
+                                    <!-- <span>Data Visualization</span> <span class="pull-right">90%</span> -->
+                                    <!-- <div class="progress"> -->
+                                        <!-- <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" -->
+                                            <!-- aria-valuemax="100"></div> -->
+                                    <!-- </div> -->
+                                    
+                                    <!-- <span>Statistical Analysis</span> <span class="pull-right">85%</span> -->
+                                    <!-- <div class="progress"> -->
+                                        <!-- <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" -->
+                                            <!-- aria-valuemax="100"></div> -->
+                                    <!-- </div> -->
+                                    
+                                    <!-- <span>Machine Learning</span> <span class="pull-right">80%</span> -->
+                                    <!-- <div class="progress"> -->
+                                        <!-- <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" -->
+                                            <!-- aria-valuemax="100"></div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    <div class="neuro-divergence-section">
+                      <div class="row justify-content-center align-items-center" style="height: 100vh;"> <!-- Center content vertically and horizontally -->
+                        <div class="col-md-10 heading-section ftco-animate fadeInUp ftco-animated">
+                                
+                                <h1 class="big">Neuro Divergence</h1>
+                                <h2 class="mb-4">Neuro Divergence</h2>
+                                
+                                <p>Neurodivergence refers to a range of conditions that affect how a person's brain processes information, learns, and behaves. It encompasses a variety of neurological differences, including: 
+                                  Autism spectrum disorder (ASD), Attention-deficit/hyperactivity disorder (ADHD), Dyslexia, Dyspraxia, and Tourette's syndrome. </p>
+
+                                 <p></p> Neurodivergence is not a medical diagnosis, but rather a term used to describe people whose brains function differently from what is considered typical or "neurotypical." It is important to note that neurodivergence is not a disability or a disorder, but simply a different way of experiencing the world. <p></p>
+
+                                 <p> Individuals with neurodivergence may have unique strengths and challenges, and their experiences can vary widely. Some may face difficulties with social interactions, learning, or sensory processing, while others may have exceptional abilities in certain areas. </p>
+                                  <p>The term "neurodivergence" was coined in the 1990s by sociologist Judy Singer to promote understanding and acceptance of neurological differences. It is a positive and empowering term that emphasizes the diversity and richness of human brains. </p>
+                                <ul class="about-info mt-4 px-md-0 px-2">
+                                    <!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li> -->
+                                    <!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+                                    <!-- <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li> -->
+                                    <!-- <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li> -->
+                                    <!-- <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li> -->
+                                    <!-- <li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li> -->
+                                    <!-- <li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li> -->
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                                      <!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li> -->
+                                      <!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+                                      <!-- <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li> -->
+                                      <!-- <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li> -->
+                                      <!-- <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li> -->
+                                      <!-- <li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li> -->
+                                      <!-- <li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li> -->
+                                      
+                                  
+                              </div>
+                          
+
+                        
+
+
+                        <!-- <div class="counter-wrap ftco-animate d-flex mt-md-3"> -->
+                            <!-- <div class="text"> -->
+                                <!-- <p class="mb-4"> -->
+                                    <!-- <span class="number" data-number="30">0</span> <span>+</span> -->
+                                    <!-- <span>&nbsp; Projects completed</span> -->
+                                <!-- </p> -->
+                                <!-- <p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    </section>
+
+   
+    
+    <section class="ftco-section ftco-no-pb" id="resume-section"> 
+      <div class="tool-we-provide-section">
+        <div class="container"> 
+          <div class="row justify-content-center pb-5"> 
+            <div class="col-md-10 heading-section text-center ftco-animate fadeInUp ftco-animated"> 
+              <h1 class="big big-2">Tools We Provide</h1> 
+              <h2 class="mb-4">Tools We Provide</h2> 
+            </div> 
+          </div> 
+    
+          <div class="row">
+            <!-- Live Speech-to-Text Section -->
+            <div class="resume-wrap ftco-animate text-center fadeInUp ftco-animated">
+              <h2>Live Speech-to-Text</h2>
+              <span class="position">Converts spoken words into text in real-time.</span>
+              <br><br>
+              <a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/Live%20Speech-to-Text.html" class="btn btn-primary py-2 px-4">Go to Live Speech-to-Text</a>
+            </div>
+    
+            <!-- Other Tools -->
+            <div class="resume-wrap ftco-animate text-center fadeInUp ftco-animated">
+              <h2>Text Sentiment Analysis</h2>
+              <span class="position">Analyzes text to determine its emotional tone.</span>
+              <br><br>
+              <a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/Text%20Sentiment%20Analysis.html" class="btn btn-primary py-2 px-4">Go to Text Sentiment Analysis</a>
+            </div>
+    
+            <div class="resume-wrap ftco-animate text-center fadeInUp ftco-animated">
+              <h2>Text-to-Speech</h2>
+              <span class="position">Converts written text into natural-sounding speech.</span>
+              <br><br>
+              <a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/Text-to-Speech.html" class="btn btn-primary py-2 px-4">Go to Text-to-Speech</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="extension-section" class="extension-section">
+      <div class="neuro-divergence-section">
+        <div class="row justify-content-center align-items-center" style="height: 100vh;"> <!-- Center content vertically and horizontally -->
+          <div class="col-md-10 heading-section ftco-animate fadeInUp ftco-animated">
+            <h1 class="big">Extension</h1>
+            <h2 class="mb-4">Extension</h2>
+            <p>Our NeuroEase extension quickly summarizes content from any website, helping you absorb information faster and more efficiently. Simply download it, add it to your browser, and streamline your reading experience!</p>
+            <!-- Centered Download Button -->
+            <a href="file:///Users/himaja/Documents/project/Portfolio-Website-Template-main/path/to/your/extension.zip" class="btn btn-primary py-3 px-5" style="background-color: #ffaa00; color: white; font-size: 13px; border-radius: 20px; text-decoration: none;">Download Extension</a>
+          </div>
+        </div>
+      </div>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-us-section"> 
+      <div class="contact-us-section">
+        <div class="container"> 
+          <div class="row justify-content-center pb-5"> 
+            <div class="col-md-10 heading-section text-center ftco-animate fadeInUp ftco-animated">
+            <h1 class="big big-2">Contact Us</h1>
+            <h2 class="mb-4">Contact Us</h2>
+            <p>Below are the details to reach out to us!</p>
+          </div>
+        </div>
+
+
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
+            <div class="align-self-stretch box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-map-signs"></span>
+                </div>
+                <h3 class="mb-4">Address</h3>
+                <p> Springfield, Illinois, USA </p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
+            <div class="align-self-stretch box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-phone2"></span>
+                </div>
+                <h3 class="mb-4">Contact Number</h3>
+                <p><a href="tel://0101010101">+1 2177177320</a></p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
+            <div class="align-self-stretch box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-paper-plane"></span>
+                </div>
+                <h3 class="mb-4">Email Address</h3>
+                <p><a href="mailto:pverm@uis.edu">Prajwal Verma</a></p>
+                <p><a href="mailto:skoll27@uis.edu">Sree Lekha</a></p>
+                <p><a href="mailto:hbath@uis.edu">Himaja Bathala</a></p>
+                <p><a href="mailto:hchan1@uis.edu">Hari Sai Dinesh</a></p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate fadeInUp ftco-animated">
+            <div class="align-self-stretch box p-4 text-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="icon-globe"></span>
+                </div>
+                <h3 class="mb-4">Linked IN</h3>
+                <p><a href="https://www.linkedin.com/in/prajwal1206" target="_blank">Prajwal Verma</a></p>
+                <p><a href="https://www.linkedin.com/in/sree-lekha-kolla-5078901b2/" target="_blank">Sree Lekha</a></p>
+                <p><a href="https://www.linkedin.com/in/himaja-bathala-2a2017159" target="_blank">Himaja Bathala</a></p>
+                <p><a href="https://www.linkedin.com/in/hari-sai-dinesh-a9b4051b9/" target="_blank">Hari Sai Dinesh </a></p>
+              </div>
+          </div>
+          </div>
+        </div></div></section>
+
+          
+   
+ </section>
+
+
+ 
+    
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+  
+              <!-- <p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <!-- <Copyright &copy; -->
+   
+      <!-- document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>  -->
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><p></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle></svg></div>
+
+
+  <script src="./Neuro Ease_files/jquery.min.js"></script>
+  <script src="./Neuro Ease_files/jquery-migrate-3.0.1.min.js"></script>
+  <script src="./Neuro Ease_files/popper.min.js"></script>
+  <script src="./Neuro Ease_files/bootstrap.min.js"></script>
+  <script src="./Neuro Ease_files/jquery.easing.1.3.js"></script>
+  <script src="./Neuro Ease_files/jquery.waypoints.min.js"></script>
+  <script src="./Neuro Ease_files/jquery.stellar.min.js"></script>
+  <script src="./Neuro Ease_files/owl.carousel.min.js"></script>
+  <script src="./Neuro Ease_files/jquery.magnific-popup.min.js"></script>
+  <script src="./Neuro Ease_files/aos.js"></script>
+  <script src="./Neuro Ease_files/jquery.animateNumber.min.js"></script>
+  <script src="./Neuro Ease_files/scrollax.min.js"></script>
+  
+  <script src="./Neuro Ease_files/main.js"></script>
+    
+  
+
+</body></html>
